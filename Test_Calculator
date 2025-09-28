@@ -1,0 +1,24 @@
+import unittest
+from CS222_Assignment6 import Calculator
+
+class TestCalulator(unittest.TestCase):
+    def calcSetUp(self):
+        self.calculator = Calculator()
+    
+    def testAddition(self):
+        self.assertEqual(self.calculator.add(5, 8), 13)
+
+    def testSubtraction(self):
+        self.assertEqual(self.calculator.subtract(12, 7), 5)
+
+    def testMultiplication(self):
+        self.assertEqual(self.calculator.multiply(5, 5), 25)
+
+    def testDivision(self):
+        self.assertEqual(self.calculator.divide(25, 5), 5)
+
+    def testDivideByZero(self):
+        with self.assertRaises(ZeroDivisionError):
+            self.calculator.divide(1, 0)
+if __name__ == "__main__":
+    unittest.main()
