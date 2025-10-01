@@ -1,8 +1,8 @@
 import unittest
 from CS222_Assignment6 import Calculator
 
-class TestCalulator(unittest.TestCase):
-    def calcSetUp(self):
+class TestCalculator(unittest.TestCase):
+    def setUp(self):
         self.calculator = Calculator()
     
     def testAddition(self):
